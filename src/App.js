@@ -1,20 +1,16 @@
-import { useEffect } from 'react';
+import { Fragment } from 'react';
 import Counter from './components/Counter';
-// import Counter from './components/CounterClass';
+import Header from './components/Header';
+import Auth from './components/Auth';
 
 function App() {
-  // useEffect(() => {
-  //   window.gapi.load('client:auth2', async () => {
-  //     await window.gapi.client.init({
-  //       clientId:
-  //         '953472252759-b3a92qg8d5c51f63ig68uj7l6mrje4mg.apps.googleusercontent.com',
-  //       // Scope - know your email, access your profile
-  //       scope: 'email',
-  //     });
-  //   });
-  // }, []);
-
-  return <Counter />;
+  return (
+    <Fragment>
+      <Header />
+      <Auth />
+      <Counter />
+    </Fragment>
+  );
 }
 
 export default App;
